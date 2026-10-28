@@ -27,7 +27,7 @@ jobs:
             configuration: Release
             extra: VAULT_USE_CLOUDKIT=YES
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Select Xcode 26
         run: |
@@ -65,4 +65,4 @@ jobs:
           grep -E "^/.*: error:" build.log | sort -u | sed "s|$GITHUB_WORKSPACE/||" || true
           echo "==== WARNINGS ===="
           grep -E "^/.*: warning:|^warning:" build.log | sort -u | sed "s|$GITHUB_WORKSPACE/||" || true
-          if grep -qE "^/.*: warning:" build.log; then echo "::warning::Build produced warnings"; exit 1; fi
+          if grep -qE "^/.*: warning:|^warning:" build.log; then echo "::error::Build produced warnings"; exit 1; fi
