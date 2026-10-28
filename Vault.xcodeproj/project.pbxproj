@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		616BCF5FC5A62BC7FBA70833 = {isa = PBXBuildFile; fileRef = 938EEB24FA9D0E21C879B1C0; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		910C1B199D71E670F2310D98 = {isa = PBXBuildFile; fileRef = 664160A38DA9FD4F1D1B67C7; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D41ACE1507DF2E93123D9AE = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F86FAA6BBF9AC94A7E4595;
+			proxyType = 1;
+			remoteGlobalIDString = A04F01D7E4186E12ABEFE4A7;
+			remoteInfo = VaultWidgets;
+		};
+		BAE9BAD5B9932569A8364232 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46F86FAA6BBF9AC94A7E4595;
+			proxyType = 1;
+			remoteGlobalIDString = DA81818E183D45B1618B3CE9;
+			remoteInfo = VaultShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4324FD6C46183AAD61856B88 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				910C1B199D71E670F2310D98,
+				616BCF5FC5A62BC7FBA70833,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		07F47B40F07D5E465AE5A5E4 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Entitlements/Vault.AppGroup-NO.CloudKit-NO.entitlements"; sourceTree = "<group>"; };
+		0CF6CC0B17C0075D9B9BA842 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Entitlements/Vault.AppGroup-YES.CloudKit-NO.entitlements"; sourceTree = "<group>"; };
+		2C40CCFFBA8385E80786C81D = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Vault.xcconfig; sourceTree = "<group>"; };
+		369659E39EE3C2685DEF42B1 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VaultWidgets-Info.plist"; sourceTree = "<group>"; };
+		3CB5FE9E32F51E3957F80595 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Vault-Info.plist"; sourceTree = "<group>"; };
+		45182DB6CC11678DD9A7910E = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = VaultWidgets.xcconfig; sourceTree = "<group>"; };
+		523D2ED126CED6D28B1EEB95 = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = VaultShare.xcconfig; sourceTree = "<group>"; };
+		528CDB70C7C756AD8E0A2343 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vault.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E15B45D2513217C927B080 = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		664160A38DA9FD4F1D1B67C7 = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VaultWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E45C6ED7D19C5AC56E509EF = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Entitlements/Extension.AppGroup-NO.entitlements"; sourceTree = "<group>"; };
+		938EEB24FA9D0E21C879B1C0 = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VaultShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		99AC54E745030D95C96550B0 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Entitlements/Extension.AppGroup-YES.entitlements"; sourceTree = "<group>"; };
+		A89BB2ACFF81E0D4D8E3924A = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VaultShare-Info.plist"; sourceTree = "<group>"; };
+		B2121BE3629BD833D4A84E13 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Entitlements/Vault.AppGroup-NO.CloudKit-YES.entitlements"; sourceTree = "<group>"; };
+		E2EB57261493D7A061502A69 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Entitlements/Vault.AppGroup-YES.CloudKit-YES.entitlements"; sourceTree = "<group>"; };
+		E80F022BA4A565F60EAC5A62 = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2B7BC33B75AC0018DC57C1A6 = {isa = PBXFileSystemSynchronizedRootGroup; path = Vault; sourceTree = "<group>"; };
+		AAC88B3A297EE7F3C840F780 = {isa = PBXFileSystemSynchronizedRootGroup; path = VaultShare; sourceTree = "<group>"; };
+		B3E4288DF9C9190229541DCB = {isa = PBXFileSystemSynchronizedRootGroup; path = Shared; sourceTree = "<group>"; };
+		DA0CCFF5B2C07B778168E6DD = {isa = PBXFileSystemSynchronizedRootGroup; path = VaultWidgets; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A9F1C8E8024599A1C19A337 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A30634385E0EDC8EFC00BFEA = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC728F88871832B5BA6F62A3 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D5F545FBA1B7116946BB4C6 = {
+			isa = PBXGroup;
+			children = (
+				528CDB70C7C756AD8E0A2343,
+				664160A38DA9FD4F1D1B67C7,
+				938EEB24FA9D0E21C879B1C0,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4898BA602D87BE762B0F8BD0 = {
+			isa = PBXGroup;
+			children = (
+				E80F022BA4A565F60EAC5A62,
+				52E15B45D2513217C927B080,
+				2C40CCFFBA8385E80786C81D,
+				45182DB6CC11678DD9A7910E,
+				523D2ED126CED6D28B1EEB95,
+				3CB5FE9E32F51E3957F80595,
+				369659E39EE3C2685DEF42B1,
+				A89BB2ACFF81E0D4D8E3924A,
+				6E45C6ED7D19C5AC56E509EF,
+				99AC54E745030D95C96550B0,
+				07F47B40F07D5E465AE5A5E4,
+				B2121BE3629BD833D4A84E13,
+				0CF6CC0B17C0075D9B9BA842,
+				E2EB57261493D7A061502A69,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		4EAE695AD1F489F78EA3E1C6 = {
+			isa = PBXGroup;
+			children = (
+				2B7BC33B75AC0018DC57C1A6,
+				B3E4288DF9C9190229541DCB,
+				DA0CCFF5B2C07B778168E6DD,
+				AAC88B3A297EE7F3C840F780,
+				4898BA602D87BE762B0F8BD0,
+				1D5F545FBA1B7116946BB4C6,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A04F01D7E4186E12ABEFE4A7 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DF0362AB80ECBEAF4C8B449;
+			buildPhases = (
+				08A95158387D19CFF2C03F1D,
+				1A9F1C8E8024599A1C19A337,
+				6EE9B8E4748EB778322B32DA,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DA0CCFF5B2C07B778168E6DD,
+				B3E4288DF9C9190229541DCB,
+			);
+			name = VaultWidgets;
+			packageProductDependencies = (
+			);
+			productName = VaultWidgets;
+			productReference = 664160A38DA9FD4F1D1B67C7;
+			productType = "com.apple.product-type.app-extension";
+		};
+		DA81818E183D45B1618B3CE9 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3432588E7713D499FDF153B4;
+			buildPhases = (
+				97B52E8E9280C0CA6459C5C1,
+				EC728F88871832B5BA6F62A3,
+				7C17099EBFE21E04C6C74A60,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AAC88B3A297EE7F3C840F780,
+				B3E4288DF9C9190229541DCB,
+			);
+			name = VaultShare;
+			packageProductDependencies = (
+			);
+			productName = VaultShare;
+			productReference = 938EEB24FA9D0E21C879B1C0;
+			productType = "com.apple.product-type.app-extension";
+		};
+		EDBBB9912EDD87BFB7516518 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC723568DD587EEB3B2D865E;
+			buildPhases = (
+				D2B5D6A41772FC9E2CAB1525,
+				A30634385E0EDC8EFC00BFEA,
+				A5847193004AD564A6285595,
+				4324FD6C46183AAD61856B88,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59AFF2527E87D299AE8E54C5,
+				B56BB70ECCCFA20BE95F2BE6,
+			);
+			fileSystemSynchronizedGroups = (
+				2B7BC33B75AC0018DC57C1A6,
+				B3E4288DF9C9190229541DCB,
+			);
+			name = Vault;
+			packageProductDependencies = (
+			);
+			productName = Vault;
+			productReference = 528CDB70C7C756AD8E0A2343;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46F86FAA6BBF9AC94A7E4595 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					EDBBB9912EDD87BFB7516518 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					A04F01D7E4186E12ABEFE4A7 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					DA81818E183D45B1618B3CE9 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = A1806D8FE767B99D399E13F3;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4EAE695AD1F489F78EA3E1C6;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1D5F545FBA1B7116946BB4C6;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDBBB9912EDD87BFB7516518,
+				A04F01D7E4186E12ABEFE4A7,
+				DA81818E183D45B1618B3CE9,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6EE9B8E4748EB778322B32DA = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C17099EBFE21E04C6C74A60 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5847193004AD564A6285595 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08A95158387D19CFF2C03F1D = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97B52E8E9280C0CA6459C5C1 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B5D6A41772FC9E2CAB1525 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59AFF2527E87D299AE8E54C5 = {
+			isa = PBXTargetDependency;
+			target = A04F01D7E4186E12ABEFE4A7;
+			targetProxy = 3D41ACE1507DF2E93123D9AE;
+		};
+		B56BB70ECCCFA20BE95F2BE6 = {
+			isa = PBXTargetDependency;
+			target = DA81818E183D45B1618B3CE9;
+			targetProxy = BAE9BAD5B9932569A8364232;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00C9DF1EE4260828A8809FA4 = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45182DB6CC11678DD9A7910E;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		2670D007293CA18479611D03 = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C40CCFFBA8385E80786C81D;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		472459908F75C0343CFD69AB = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C40CCFFBA8385E80786C81D;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		595489D7051901B527DE155C = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45182DB6CC11678DD9A7910E;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		6AFE22E70BE079CBB63426F8 = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52E15B45D2513217C927B080;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9AA79DA971A4005EF55B0382 = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 523D2ED126CED6D28B1EEB95;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		D48F58F8CA231B2301441318 = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52E15B45D2513217C927B080;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFA407ED61B8F2E09BD9B9D4 = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 523D2ED126CED6D28B1EEB95;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DF0362AB80ECBEAF4C8B449 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				595489D7051901B527DE155C,
+				00C9DF1EE4260828A8809FA4,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3432588E7713D499FDF153B4 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AA79DA971A4005EF55B0382,
+				FFA407ED61B8F2E09BD9B9D4,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1806D8FE767B99D399E13F3 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48F58F8CA231B2301441318,
+				6AFE22E70BE079CBB63426F8,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC723568DD587EEB3B2D865E = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				472459908F75C0343CFD69AB,
+				2670D007293CA18479611D03,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46F86FAA6BBF9AC94A7E4595;
+}

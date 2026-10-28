@@ -1,0 +1,12 @@
+#include "Base.xcconfig"
+
+PRODUCT_NAME = VaultWidgets
+PRODUCT_BUNDLE_IDENTIFIER = $(VAULT_APP_BUNDLE_ID).widgets
+INFOPLIST_FILE = Config/VaultWidgets-Info.plist
+CODE_SIGN_ENTITLEMENTS = Config/Entitlements/Extension.AppGroup-$(VAULT_USE_APP_GROUP).entitlements
+SKIP_INSTALL = YES
+SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor
+ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor
+ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @executable_path/../../Frameworks
+INFOPLIST_KEY_CFBundleDisplayName = Vault

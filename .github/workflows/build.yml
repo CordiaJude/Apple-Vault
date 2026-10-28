@@ -1,0 +1,68 @@
+name: Build
+
+on:
+  push:
+    branches: ["**"]
+    paths-ignore: ["**.md", "docs/**"]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: xcodebuild (${{ matrix.name }})
+    runs-on: macos-26
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Debug, local only
+            configuration: Debug
+            extra: ""
+          - name: Release, CloudKit flag on
+            configuration: Release
+            extra: VAULT_USE_CLOUDKIT=YES
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode 26
+        run: |
+          XCODE=$(ls -d /Applications/Xcode_26*.app | sort -V | tail -1)
+          sudo xcode-select -s "$XCODE"
+          xcodebuild -version
+          xcrun --sdk iphonesimulator --show-sdk-version
+
+      - name: Check the generated project is up to date
+        run: |
+          python3 scripts/generate_xcodeproj.py
+          git diff --exit-code -- Vault.xcodeproj
+
+      - name: SDK probe
+        if: matrix.configuration == 'Debug'
+        run: bash scripts/sdk_probe.sh || true
+
+      - name: Build for iOS Simulator
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project Vault.xcodeproj \
+            -scheme Vault \
+            -configuration ${{ matrix.configuration }} \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO ${{ matrix.extra }} \
+            2>&1 | tee build.log | grep -E "(error|warning):|\*\* BUILD" || true
+          grep -q "\*\* BUILD SUCCEEDED \*\*" build.log
+
+      - name: Summary of diagnostics
+        if: always()
+        run: |
+          echo "==== ERRORS ===="
+          grep -E "^/.*: error:" build.log | sort -u | sed "s|$GITHUB_WORKSPACE/||" || true
+          echo "==== WARNINGS ===="
+          grep -E "^/.*: warning:|^warning:" build.log | sort -u | sed "s|$GITHUB_WORKSPACE/||" || true
+          if grep -qE "^/.*: warning:" build.log; then echo "::warning::Build produced warnings"; exit 1; fi

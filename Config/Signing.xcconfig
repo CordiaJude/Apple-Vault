@@ -1,0 +1,22 @@
+// ─────────────────────────────────────────────────────────────────────────────
+//  Vault signing configuration — the only file you need to edit to install.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// Your Apple ID's Team ID (Xcode ▸ Settings ▸ Accounts ▸ your team). You can
+// also leave this empty and pick the team in Signing & Capabilities instead.
+DEVELOPMENT_TEAM =
+
+// A reverse-DNS prefix that is unique to you, e.g. com.janeappleseed.
+// Bundle identifiers must be globally unique, so change this before installing.
+VAULT_BUNDLE_ID_PREFIX = com.example
+
+// App Groups let the widgets, Control Center control, Siri and the Share
+// extension see document names and expiry dates. Supported on free accounts.
+// Set to NO if signing fails with an App Groups error; the app still works,
+// but widgets show a placeholder and "Save to Vault" is unavailable.
+VAULT_USE_APP_GROUP = YES
+
+// iCloud sync via CloudKit. Requires a paid Apple Developer Program membership.
+// Leave NO for a free account. When YES, the iCloud toggle appears in Settings
+// (it is still OFF until you turn it on).
+VAULT_USE_CLOUDKIT = NO
