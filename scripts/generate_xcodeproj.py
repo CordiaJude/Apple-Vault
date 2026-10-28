@@ -33,7 +33,7 @@ TARGETS = [
         "product": "Vault.app",
         "type": "com.apple.product-type.application",
         "file_type": "wrapper.application",
-        "folders": ["Vault", "Shared"],
+        "folders": ["Vault", "Shared", "SharedIntents"],
         "xcconfig": "Vault.xcconfig",
         "embeds": ["VaultWidgets", "VaultShare"],
     },
@@ -42,7 +42,7 @@ TARGETS = [
         "product": "VaultWidgets.appex",
         "type": "com.apple.product-type.app-extension",
         "file_type": "wrapper.app-extension",
-        "folders": ["VaultWidgets", "Shared"],
+        "folders": ["VaultWidgets", "Shared", "SharedIntents"],
         "xcconfig": "VaultWidgets.xcconfig",
         "embeds": [],
     },
@@ -63,7 +63,7 @@ CONFIG_FILES = [
 ] + sorted("Entitlements/" + f for f in os.listdir(os.path.join(ROOT, "Config", "Entitlements")))
 
 FILE_TYPES = {".xcconfig": "text.xcconfig", ".plist": "text.plist.xml", ".entitlements": "text.plist.entitlements"}
-SYNC_FOLDERS = ["Vault", "Shared", "VaultWidgets", "VaultShare"]
+SYNC_FOLDERS = ["Vault", "Shared", "SharedIntents", "VaultWidgets", "VaultShare"]
 
 PROJECT_SETTINGS = {
     "Debug": {

@@ -68,6 +68,7 @@
 		AAC88B3A297EE7F3C840F780 = {isa = PBXFileSystemSynchronizedRootGroup; path = VaultShare; sourceTree = "<group>"; };
 		B3E4288DF9C9190229541DCB = {isa = PBXFileSystemSynchronizedRootGroup; path = Shared; sourceTree = "<group>"; };
 		DA0CCFF5B2C07B778168E6DD = {isa = PBXFileSystemSynchronizedRootGroup; path = VaultWidgets; sourceTree = "<group>"; };
+		EB18EC55CAE4963031E8EB21 = {isa = PBXFileSystemSynchronizedRootGroup; path = SharedIntents; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +132,7 @@
 			children = (
 				2B7BC33B75AC0018DC57C1A6,
 				B3E4288DF9C9190229541DCB,
+				EB18EC55CAE4963031E8EB21,
 				DA0CCFF5B2C07B778168E6DD,
 				AAC88B3A297EE7F3C840F780,
 				4898BA602D87BE762B0F8BD0,
@@ -156,6 +158,7 @@
 			fileSystemSynchronizedGroups = (
 				DA0CCFF5B2C07B778168E6DD,
 				B3E4288DF9C9190229541DCB,
+				EB18EC55CAE4963031E8EB21,
 			);
 			name = VaultWidgets;
 			packageProductDependencies = (
@@ -205,6 +208,7 @@
 			fileSystemSynchronizedGroups = (
 				2B7BC33B75AC0018DC57C1A6,
 				B3E4288DF9C9190229541DCB,
+				EB18EC55CAE4963031E8EB21,
 			);
 			name = Vault;
 			packageProductDependencies = (
