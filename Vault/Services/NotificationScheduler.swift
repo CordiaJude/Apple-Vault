@@ -28,8 +28,9 @@ final class NotificationScheduler {
 
     func reschedule(for documents: [VaultDocument]) async {
         let wanted = documents.flatMap(requests(for:))
-        let needsPermission = !wanted.isEmpty
-        guard !needsPermission || (await requestAuthorizationIfNeeded()) else { return }
+        if !wanted.isEmpty {
+            guard await requestAuthorizationIfNeeded() else { return }
+        }
 
         let pending = await center.pendingNotificationRequests()
         let stale = pending.map(\.identifier).filter { $0.hasPrefix(Self.prefix) }

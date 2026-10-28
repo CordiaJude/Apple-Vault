@@ -2,7 +2,7 @@ import Foundation
 import SwiftData
 import UniformTypeIdentifiers
 
-extension UTType {
+nonisolated extension UTType {
     static let vaultBackup = UTType(exportedAs: "app.vault.backup", conformingTo: .data)
 }
 

@@ -221,9 +221,7 @@ struct PersonEditorView: View {
                     VStack(spacing: 16) {
                         AvatarView(color: color, emoji: emoji, initials: initials, photo: photo, size: 96)
                             .animation(.default, value: emoji)
-                        PhotosPicker(selection: $photoItem, matching: .images) {
-                            Text(photo == nil ? "Choose Photo" : "Change Photo")
-                        }
+                        PhotosPicker(photo == nil ? "Choose Photo" : "Change Photo", selection: $photoItem, matching: .images)
                         .buttonStyle(.glass)
                         if photo != nil {
                             Button("Remove Photo", role: .destructive) { photo = nil }

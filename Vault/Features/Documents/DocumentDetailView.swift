@@ -149,8 +149,8 @@ struct DocumentDetailView: View {
         } message: {
             Text("This deletes the document, its images and its reminders from this iPhone.")
         }
-        .alert("Something Went Wrong", isPresented: .constant(errorMessage != nil)) {
-            Button("OK") { errorMessage = nil }
+        .alert("Something Went Wrong", isPresented: Binding(get: { errorMessage != nil }, set: { if !$0 { errorMessage = nil } })) {
+            Button("OK") {}
         } message: {
             Text(errorMessage ?? "")
         }

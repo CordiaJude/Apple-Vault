@@ -24,8 +24,10 @@ struct SettingsView: View {
                         set: { newValue in
                             Task {
                                 // Turning the lock off requires proving you can unlock it.
-                                if newValue || (await lock.authenticate(reason: String(localized: "Turn off \(lock.biometryName) for Vault"))) {
-                                    lock.lockEnabled = newValue
+                                if newValue {
+                                    lock.lockEnabled = true
+                                } else if await lock.authenticate(reason: String(localized: "Turn off \(lock.biometryName) for Vault")) {
+                                    lock.lockEnabled = false
                                 }
                             }
                         }

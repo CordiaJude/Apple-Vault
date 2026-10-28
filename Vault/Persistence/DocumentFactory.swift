@@ -64,45 +64,6 @@ extension DocumentPage {
     }
 }
 
-extension VaultDocument {
-    /// Adds pages in order: the first becomes the front, the second the back
-    /// (for card-sized documents), the rest extra pages.
-    func addPages(_ prepared: [PreparedPage], in context: ModelContext, startingRole: PageRole? = nil) {
-        var existing = pages ?? []
-        for (offset, page) in prepared.enumerated() {
-            let role: PageRole
-            if let startingRole, offset == 0 {
-                role = startingRole
-            } else if !existing.contains(where: { $0.role == .front }) {
-                role = .front
-            } else if kind.isCardSized, !page.isPDF, !existing.contains(where: { $0.role == .back }) {
-                role = .back
-            } else {
-                role = .extra
-            }
-            if role != .extra, let replaced = existing.first(where: { $0.role == role }) {
-                existing.removeAll { $0 === replaced }
-                context.delete(replaced)
-            }
-            let newPage = DocumentPage(prepared: page, role: role, index: existing.count)
-            context.insert(newPage)
-            newPage.document = self
-            existing.append(newPage)
-        }
-        pages = existing
-        updatedAt = .now
-    }
-
-    /// A fresh document from a template, with empty fields ready to fill in.
-    static func make(kind: DocumentKind, title: String? = nil, person: Person?, store: VaultStore) -> VaultDocument {
-        let document = VaultDocument(title: title ?? kind.name, kind: kind)
-        document.person = person
-        document.category = store.category(for: kind.category)
-        document.payload = DocumentPayload(fields: kind.fieldTemplates.map { $0.makeField() })
-        return document
-    }
-}
-
 extension UIImage {
     nonisolated func vaultScaled(maxDimension: CGFloat) -> UIImage {
         let pixelWidth = size.width * scale

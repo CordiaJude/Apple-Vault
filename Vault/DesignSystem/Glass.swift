@@ -6,12 +6,12 @@ import SwiftUI
 extension View {
     /// Liquid Glass that falls back to an opaque, high-contrast material when
     /// Reduce Transparency or Increase Contrast is on.
-    func vaultGlass<S: Shape>(in shape: S, tint: Color? = nil, interactive: Bool = false) -> some View {
+    func vaultGlass<S: InsettableShape>(in shape: S, tint: Color? = nil, interactive: Bool = false) -> some View {
         modifier(VaultGlassModifier(shape: shape, tint: tint, interactive: interactive))
     }
 }
 
-private struct VaultGlassModifier<S: Shape>: ViewModifier {
+private struct VaultGlassModifier<S: InsettableShape>: ViewModifier {
     let shape: S
     let tint: Color?
     let interactive: Bool
