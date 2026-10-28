@@ -15,6 +15,8 @@ nonisolated struct VaultSnapshot: Codable, Sendable {
         var color: CardColor
         var expiresOn: Date?
         var isFavorite: Bool
+        /// Whether it belongs to the person marked "Me" (so Siri picks your passport, not your partner's).
+        var belongsToMe: Bool?
     }
 
     var items: [Item]

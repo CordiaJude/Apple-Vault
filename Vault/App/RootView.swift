@@ -11,6 +11,12 @@ struct RootView: View {
     @Environment(HUDCenter.self) private var hud
     @Environment(ScreenCaptureMonitor.self) private var captureMonitor
     @Environment(\.scenePhase) private var scenePhase
+    @State private var privacyWindow = PrivacyWindow()
+
+    private var privacyContent: PrivacyWindow.Content {
+        if lock.isLocked { return .lock }
+        return scenePhase == .active ? .hidden : .cover
+    }
 
     var body: some View {
         ZStack {
@@ -33,21 +39,17 @@ struct RootView: View {
                     .id(store.generation)
             }
 
+            // Underneath the privacy window, so nothing flashes while it appears.
             if lock.isLocked {
-                LockView()
-                    .transition(.opacity)
-                    .zIndex(1)
-            }
-
-            if scenePhase != .active {
-                PrivacyCover()
-                    .zIndex(2)
+                Rectangle().fill(.background).ignoresSafeArea()
             }
         }
         .overlay { HUDOverlay(center: hud) }
         .background { ScreenCaptureObserver(monitor: captureMonitor).frame(width: 0, height: 0) }
-        .animation(.easeInOut(duration: 0.25), value: lock.isLocked)
         .sensoryFeedback(.success, trigger: lock.unlockCount)
+        .onChange(of: privacyContent, initial: true) { _, content in
+            privacyWindow.update(content, lock: lock)
+        }
         .onChange(of: scenePhase) { _, phase in
             switch phase {
             case .background: lock.sceneDidEnterBackground()

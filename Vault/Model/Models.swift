@@ -253,7 +253,8 @@ final class VaultDocument {
             personName: person?.displayName,
             color: color,
             expiresOn: expiresOn,
-            isFavorite: isFavorite
+            isFavorite: isFavorite,
+            belongsToMe: person?.relationship == .me
         )
     }
 }
